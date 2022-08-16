@@ -1,93 +1,86 @@
 <!DOCTYPE html>
 <html>
+<title>Portfolio Dileep</title>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">    
+<link rel="icon" href="ui-data/html.png" alt="segoe ui">
+<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,600;0,900;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel = "stylesheet" href="style.css">
+<script src="script.js" defer></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet"> 
 <style>
-#snackbar {
-  visibility: hidden;
-  min-width: 250px;
-  margin-left: -125px;
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  border-radius: 2px;
-  padding: 16px;
-  position: fixed;
-  z-index: 1;
-  left: 50%;
-  bottom: 30px;
-  font-size: 17px;
+.landing-page{
+	height : 98vh;
+	display : flex;
+	justify-content : center;
+	flex-direction : column;
+	background-image : linear-gradient(to bottom, #00ff99, #00ffcc);
 }
+.container-1{
+	height : 50%;
+	<!-- background-color : #00ff99; -->
+	text-align : center;
+	align-items : center;
+	display : flex;
+	justify-content : center;
+}
+.container-2{
+	height : 50%;
+	<!-- background-color : #00ffcc; -->
+		text-align : center;
 
-#myInput {
-	width:400px;
-	height : 20px;
+	align-items : center;
+	display : flex;
+	<!-- flex-direction : column; -->
 }
-
-button{
-	cursor : pointer;
+.head-main{
+	padding : 0;
+	margin: 0;
+	text-align : center;
+	align-items : center;
+	font-size : 120px;
+	font-family: Garamond, serif;
+	color : red;
 }
-#snackbar.show {
-  visibility: visible;
-  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+.description-text{
+	width : 90%;
+	justify-content : center;
 }
-
-@-webkit-keyframes fadein {
-  from {bottom: 0; opacity: 0;} 
-  to {bottom: 30px; opacity: 1;}
+.logo{
+	text-align : top;
 }
-
-@keyframes fadein {
-  from {bottom: 0; opacity: 0;}
-  to {bottom: 30px; opacity: 1;}
-}
-
-@-webkit-keyframes fadeout {
-  from {bottom: 30px; opacity: 1;} 
-  to {bottom: 0; opacity: 0;}
-}
-
-@keyframes fadeout {
-  from {bottom: 30px; opacity: 1;}
-  to {bottom: 0; opacity: 0;}
+.description{
+	padding : 0;
+	margin: 0;
+	font-size : 30px;
+	text-align : center;
+	font-family: 'Dancing Script', cursive;
+	color : red;
 }
 </style>
 
 <body>
-
-<p>Click on the button to copy the text from the text field. Try to paste the text (e.g. ctrl+v) afterwards in a different window, to see the effect.</p>
-
-<input type="paragraph" value="This site will be deployed soon #Dileep" id="myInput"></input>
-<button id="buttonText" onclick="myFunction(), snackFunction(), changeText()">Copy text</button>
-
-<div id="snackbar">Copied to Clipboard..</div>
+<div class="landing-page">
+<div class="container-1">
+<h1 class="head-main" >Dileep's Empire</h1>
+</div>
+<div class="container-2">
+<div class="description-text">
+<p class="description">Site Depolyed Soon!</p>
+</div>
+<div class="logo">
+<a href="https://www.instagram.com/dileep_gowda_03/" target="_blank"><span><i class="fa fa-instagram" style="font-size:36px; color:#ff3399"></i></a>
+</span>
+</div>
+</div>
+</div>
 
 <script>
-function myFunction() {
-  /* Get the text field */
-  var copyText = document.getElementById("myInput");
 
-  /* Select the text field */
-  copyText.select();
-  copyText.setSelectionRange(0, 99999); /* For mobile devices */
-
-  /* Copy the text inside the text field */
-  navigator.clipboard.writeText(copyText.value);
-  
-
-
-}
-
-  /* Alert the copied text */
-  function snackFunction() {
-  var x = document.getElementById("snackbar");
-  x.className = "show";
-  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-}
-
-	function changeText(){
-	var buttonText = document.getElementById("buttonText");
-	buttonText.innerHTML = "Copied!";
-	}
 </script>
 
 </body>
